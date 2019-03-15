@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Hot Swap Raspberry Pi Batteries | Craic Heavy Engineering</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Hot Swap Raspberry Pi Batteries" />
+<meta name="author" content="Rob Jones" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In a previous post I described how high capacity power tool batteries can be a great way to power microcontroller projects via USB." />
+<meta property="og:description" content="In a previous post I described how high capacity power tool batteries can be a great way to power microcontroller projects via USB." />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2019/02/02/hot-swap-raspberry-pi-batteries.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2019/02/02/hot-swap-raspberry-pi-batteries.html" />
+<meta property="og:site_name" content="Craic Heavy Engineering" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-02T08:52:37-08:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/jekyll/update/2019/02/02/hot-swap-raspberry-pi-batteries.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2019/02/02/hot-swap-raspberry-pi-batteries.html"},"author":{"@type":"Person","name":"Rob Jones"},"description":"In a previous post I described how high capacity power tool batteries can be a great way to power microcontroller projects via USB.","@type":"BlogPosting","headline":"Hot Swap Raspberry Pi Batteries","dateModified":"2019-02-02T08:52:37-08:00","datePublished":"2019-02-02T08:52:37-08:00","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Craic Heavy Engineering" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Craic Heavy Engineering</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/links/">Links</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Hot Swap Raspberry Pi Batteries</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-02-02T08:52:37-08:00" itemprop="datePublished">Feb 2, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>In a <a href="/jekyll/update/2019/01/24/power-tool-batteries-as-usb-power-source.html">previous post</a> I described how high capacity power tool batteries can be a great way to power microcontroller projects via USB.</p>
+
+<p>This post describes how to use two such batteries with USB adapters and a ‘Y’ USB cable to hot swap the power source for a Raspberry Pi with interrupting the computer.</p>
+
+<p>In many battery powered Pi, Arduino, etc. projects it is not a big deal to shutdown the device, swap in a new battery and power it up again.
+But for some remote monitoring projects you would rather not handle that interruption.</p>
+
+<p>If you have two identical USB power sources and a ‘Y’ USB cable you can do this.</p>
+
+<p>The cable that I used is a <a href="https://www.amazon.com/StarTech-com-Cable-External-Drive-Micro/dp/B0047AALS0">StarTech.com 3 ft USB Y Cable for External Hard Drive USB A to Micro B</a> - there are a lots of alternatives available. 
+These allow you to double up your power source is you need more than a single battery can provide.</p>
+
+<p>NOTE that they are <strong>not</strong> intended to be plugged into two USB ports that can provide <strong>data</strong> - <em>power only</em>.</p>
+
+<p>You also want to make sure that your two batteries are identical in terms of the voltage they are supplying. 
+If they were not then there is the chance that current would flow from the higher voltage to the lower. 
+But if you are using identical batteries like I do here this should not be an issue.</p>
+
+<p>This approach is pretty simple, but here are the specific steps involved.</p>
+
+<p>The setup that I am using includes a Raspberry Pi with the Pi HDMI display, the ‘Y’ USB cable, two Makita batteries and two Makita USB adapters.
+The adapters have an On/Off switch.</p>
+
+<p><img src="/assets/images/20190202_batteries_cable_pi.png" alt="Makita batteries with Raspberry Pi" /></p>
+
+<p>Here is the Pi up and running, powered by battery #1
+<img src="/assets/images/20190202_step_1.png" alt="Step 1" /></p>
+
+<p>Next Battery #2 is plugged in while <strong>off</strong>
+<img src="/assets/images/20190202_step_2.png" alt="Step 2" /></p>
+
+<p>Battery #2 is turned <strong>on</strong>
+<img src="/assets/images/20190202_step_3.png" alt="Step 3" /></p>
+
+<p>Battery #1 is turned <strong>off</strong>
+<img src="/assets/images/20190202_step_4.png" alt="Step 4" /></p>
+
+<p>Battery #1 is unplugged</p>
+
+<p><img src="/assets/images/20190202_step_5.png" alt="Step 5" /></p>
+
+<p>The Pi keeps running with no interruption.</p>
+
+<p>Of course, you can keep swapping in fresh batteries for as long as you want.</p>
+
+<p>Batteries aside, this is a $9 solution to an otherwise tricky problem.</p>
+
+  </div><a class="u-url" href="/jekyll/update/2019/02/02/hot-swap-raspberry-pi-batteries.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Craic Heavy Engineering</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Rob Jones</li><li><a class="u-email" href="mailto:jones@craic.com">jones@craic.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/craic"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">craic</span></a></li><li><a href="https://www.twitter.com/craiccomputing"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">craiccomputing</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Craic Heavy Engineering is the site where I post information about my computer hardware projects. These include Raspberry Pi, Arduino family devices, various electronics designs and other hardware.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

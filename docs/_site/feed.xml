@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-15T13:11:49-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Craic Heavy Engineering</title><subtitle>Craic Heavy Engineering is the site where I post information about my computer hardware projects. These include Raspberry Pi, Arduino family devices, various electronics designs and other hardware.</subtitle><author><name>Rob Jones</name></author><entry><title type="html">Hot Swap Raspberry Pi Batteries</title><link href="http://localhost:4000/jekyll/update/2019/02/02/hot-swap-raspberry-pi-batteries.html" rel="alternate" type="text/html" title="Hot Swap Raspberry Pi Batteries" /><published>2019-02-02T08:52:37-08:00</published><updated>2019-02-02T08:52:37-08:00</updated><id>http://localhost:4000/jekyll/update/2019/02/02/hot-swap-raspberry-pi-batteries</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/02/02/hot-swap-raspberry-pi-batteries.html">&lt;p&gt;In a &lt;a href=&quot;/jekyll/update/2019/01/24/power-tool-batteries-as-usb-power-source.html&quot;&gt;previous post&lt;/a&gt; I described how high capacity power tool batteries can be a great way to power microcontroller projects via USB.&lt;/p&gt;
+
+&lt;p&gt;This post describes how to use two such batteries with USB adapters and a ‘Y’ USB cable to hot swap the power source for a Raspberry Pi with interrupting the computer.&lt;/p&gt;
+
+&lt;p&gt;In many battery powered Pi, Arduino, etc. projects it is not a big deal to shutdown the device, swap in a new battery and power it up again.
+But for some remote monitoring projects you would rather not handle that interruption.&lt;/p&gt;
+
+&lt;p&gt;If you have two identical USB power sources and a ‘Y’ USB cable you can do this.&lt;/p&gt;
+
+&lt;p&gt;The cable that I used is a &lt;a href=&quot;https://www.amazon.com/StarTech-com-Cable-External-Drive-Micro/dp/B0047AALS0&quot;&gt;StarTech.com 3 ft USB Y Cable for External Hard Drive USB A to Micro B&lt;/a&gt; - there are a lots of alternatives available. 
+These allow you to double up your power source is you need more than a single battery can provide.&lt;/p&gt;
+
+&lt;p&gt;NOTE that they are &lt;strong&gt;not&lt;/strong&gt; intended to be plugged into two USB ports that can provide &lt;strong&gt;data&lt;/strong&gt; - &lt;em&gt;power only&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;You also want to make sure that your two batteries are identical in terms of the voltage they are supplying. 
+If they were not then there is the chance that current would flow from the higher voltage to the lower. 
+But if you are using identical batteries like I do here this should not be an issue.&lt;/p&gt;
+
+&lt;p&gt;This approach is pretty simple, but here are the specific steps involved.&lt;/p&gt;
+
+&lt;p&gt;The setup that I am using includes a Raspberry Pi with the Pi HDMI display, the ‘Y’ USB cable, two Makita batteries and two Makita USB adapters.
+The adapters have an On/Off switch.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190202_batteries_cable_pi.png&quot; alt=&quot;Makita batteries with Raspberry Pi&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the Pi up and running, powered by battery #1
+&lt;img src=&quot;/assets/images/20190202_step_1.png&quot; alt=&quot;Step 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next Battery #2 is plugged in while &lt;strong&gt;off&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/20190202_step_2.png&quot; alt=&quot;Step 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Battery #2 is turned &lt;strong&gt;on&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/20190202_step_3.png&quot; alt=&quot;Step 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Battery #1 is turned &lt;strong&gt;off&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/20190202_step_4.png&quot; alt=&quot;Step 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Battery #1 is unplugged&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190202_step_5.png&quot; alt=&quot;Step 5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Pi keeps running with no interruption.&lt;/p&gt;
+
+&lt;p&gt;Of course, you can keep swapping in fresh batteries for as long as you want.&lt;/p&gt;
+
+&lt;p&gt;Batteries aside, this is a $9 solution to an otherwise tricky problem.&lt;/p&gt;</content><author><name>Rob Jones</name></author><summary type="html">In a previous post I described how high capacity power tool batteries can be a great way to power microcontroller projects via USB.</summary></entry><entry><title type="html">Power Tool Batteries as USB Power Sources</title><link href="http://localhost:4000/jekyll/update/2019/01/24/power-tool-batteries-as-usb-power-source.html" rel="alternate" type="text/html" title="Power Tool Batteries as USB Power Sources" /><published>2019-01-24T08:52:37-08:00</published><updated>2019-01-24T08:52:37-08:00</updated><id>http://localhost:4000/jekyll/update/2019/01/24/power-tool-batteries-as-usb-power-source</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/01/24/power-tool-batteries-as-usb-power-source.html">&lt;p&gt;This post describes how to use high capacity power batteries from cordless power tools to power microcontroller projects via USB.
+This is a great way to power standalone projects for longer periods of time than are possible with typical &lt;strong&gt;Li Poly&lt;/strong&gt; batteries.&lt;/p&gt;
+
+&lt;p&gt;If you have an interest in Do-It-Yourself projects, carpentry, building etc then you probably have a set of
+cordless power tools.&lt;/p&gt;
+
+&lt;p&gt;These are powered by substantial batteries and with each generation of the technology these have become lighter and more powerful.&lt;/p&gt;
+
+&lt;p&gt;My current set of tools are from &lt;strong&gt;Makita&lt;/strong&gt; and have &lt;strong&gt;18V Lithium Ion&lt;/strong&gt; batteries.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190124_makita_power_tools.png&quot; alt=&quot;Makita power tools&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These batteries are available with several capacities. I have &lt;strong&gt;2.0 Ah&lt;/strong&gt; and &lt;strong&gt;4.0 Ah&lt;/strong&gt; (amp hours).&lt;/p&gt;
+
+&lt;p&gt;This capacity comes at a price, however, at &lt;strong&gt;$50&lt;/strong&gt; to &lt;strong&gt;$60&lt;/strong&gt; for each battery.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190124_makita_batteries.png&quot; alt=&quot;Makita batteries&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Makita and several of the other manufacturers realized that there was a market for an adapter that would let people charge their
+phones or tablets via a USB cable, using their batteries as the power source - ideal for a builder needing to charge a phone on site
+without access to regular power.&lt;/p&gt;
+
+&lt;p&gt;Makita’s version of this is the &lt;a href=&quot;https://www.amazon.com/dp/B019WI5XXO&quot;&gt;Makita ADP05 18V LXT Lithium-Ion Cordless Power Source&lt;/a&gt; which 
+costs around &lt;strong&gt;$ 20&lt;/strong&gt; from Amazon. This unit slides onto a battery just like a power tool. It has two USB ports covered by dust caps, 
+an On/Off slide switch and a belt clip.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190124_makita_battery_w_usb_adapter.png&quot; alt=&quot;Makita battery with USB adapter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The unit can deliver &lt;strong&gt;2.1A&lt;/strong&gt; at 5 V per USB port and you can connect two ports with a suitable cable to deliver &lt;strong&gt;4.2 A&lt;/strong&gt; which is more than 
+capable of powering a Raspberry Pi, a display and then some.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190124_makita_battery_w_raspberry_pi.png&quot; alt=&quot;Makita battery with Raspberry Pi&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How long a battery will power your project obviously depends on the load but you run a Raspberry Pi for 24 hours with the 4.0 Ah battery with no problem.&lt;/p&gt;
+
+&lt;p&gt;The output is USB so you can just treat it as a regular power source. In my experiments I measured a voltage of &lt;strong&gt;4.99 V&lt;/strong&gt; which was low enough to 
+trigger the low voltage warning on a Raspberry Pi (&lt;em&gt;the yellow lightning bolt in the top right of a console display&lt;/em&gt;) but this did 
+not seem to affect the operation of the Pi in the least.&lt;/p&gt;
+
+&lt;p&gt;The adapter is pretty simple in design with just two prongs that connect to the battery. The battery itself has those as well as a
+seven pin connector that only appears to be used by the battery charger - probably to measure charging progress or faults.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190124_makita_battery_next_to_adapter.png&quot; alt=&quot;Makita battery with Raspberry Pi&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A nice feature of the batteries is a series of red leds that show how much pwer is left when you push the small button below them.
+This turns out to be very useful.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190124_makita_battery_power_indicator.png&quot; alt=&quot;Makita battery with Raspberry Pi&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Because they are designed for use with power tools, these batteries are pretty rugged. There does not appear to be any problem with 
+running the battery all the way down and then recharging it.&lt;/p&gt;
+
+&lt;p&gt;If you need more than &lt;strong&gt;2.1 A&lt;/strong&gt; then you can connect the two USB ports using a special USB ‘Y’ cable to get &lt;strong&gt;4.2 A&lt;/strong&gt; - for example 
+&lt;a href=&quot;https://www.amazon.com/StarTech-com-Cable-External-Drive-Micro/dp/B0047AALS0&quot;&gt;StarTech.com 3 ft USB Y Cable for External Hard Drive USB A to Micro B&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190124_makita_battery_w_double_usb_cable.png&quot; alt=&quot;Makita battery with Raspberry Pi&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These batteries would be an expensive solution to powering your projects if you don’t already have a set of power tools. 
+But if you already made that investment then an additional $20 gives you a very useful capability.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;As a bonus you have a nice way to charge your phone or tablet next time you lose power !&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;My gear is all Makita but &lt;strong&gt;Dewalt&lt;/strong&gt; and &lt;strong&gt;Milwaukee&lt;/strong&gt; power tools have effectively the same thing and there are multiple third party 
+copycat devices available on Amazon.&lt;/p&gt;</content><author><name>Rob Jones</name></author><summary type="html">This post describes how to use high capacity power batteries from cordless power tools to power microcontroller projects via USB. This is a great way to power standalone projects for longer periods of time than are possible with typical Li Poly batteries.</summary></entry><entry><title type="html">Project Mounting Boards</title><link href="http://localhost:4000/jekyll/update/2019/01/22/project-mounting-boards.html" rel="alternate" type="text/html" title="Project Mounting Boards" /><published>2019-01-22T07:20:37-08:00</published><updated>2019-01-22T07:20:37-08:00</updated><id>http://localhost:4000/jekyll/update/2019/01/22/project-mounting-boards</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/01/22/project-mounting-boards.html">&lt;p&gt;Building Raspberry Pi and Arduino projects can get messy if you have the microcontroller, a breadboard and other devices all
+hooked up with loose wires.&lt;/p&gt;
+
+&lt;p&gt;Every time you have to move them you risk pulling out a wire and having to figure out where it was supposed to go.&lt;/p&gt;
+
+&lt;p&gt;Adafruit and others sell some &lt;a href=&quot;https://www.adafruit.com/product/942&quot;&gt;acrylic project boards&lt;/a&gt; but these can be a bit cramped for some of my designs.&lt;/p&gt;
+
+&lt;p&gt;My solution is to mount my projects on small Artist Boards - small wooden frames that support a 
+smooth wood panel that are used for small oil paintings, and other art projects.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190122_project_board_w_pi_breadboard.png&quot; alt=&quot;Ampersand board with Pi and Breadboard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;They look good, all the components and wires stay in place and your projects are easy to store.&lt;/p&gt;
+
+&lt;p&gt;I use &lt;strong&gt;Ampersand Museum Series Panels&lt;/strong&gt; - specifically their &lt;strong&gt;hardbord&lt;/strong&gt; (sic) panels.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190122_project_board_in_wrapper.png&quot; alt=&quot;Ampersand board in wrapper&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These are not generally available on &lt;strong&gt;Amazon&lt;/strong&gt; but you can find them on the website for &lt;a href=&quot;https://www.dickblick.com/products/ampersand-hardbord/&quot;&gt;Blick art supplies&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I get the &lt;strong&gt;3/4 inch cradled Hardbord&lt;/strong&gt; type which have a smooth brown face and a 3/4 inch supporting frame. 
+The finish is great and they look really professional.&lt;/p&gt;
+
+&lt;p&gt;They are available in sizes from 6” x 6” up to 24” x 36”. I typically get the &lt;strong&gt;6” x 8”&lt;/strong&gt; panels which cost around &lt;strong&gt;$10&lt;/strong&gt; each.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-mount-circuit-boards-to-the-project-board&quot;&gt;How to mount circuit boards to the project board&lt;/h3&gt;
+
+&lt;p&gt;Mounting holes in Arduino, Raspberry Pi and other circuit boards tend to be 2.5 mm.&lt;/p&gt;
+
+&lt;p&gt;Nylon standoffs and screws in this size are a good way to mount boards securely on a panel.&lt;/p&gt;
+
+&lt;p&gt;These are available as sets from &lt;a href=&quot;https://www.adafruit.com&quot;&gt;Adafruit&lt;/a&gt; for around &lt;strong&gt;$15&lt;/strong&gt; each, as well as from various sellers on Amazon.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.adafruit.com/product/3658&quot;&gt;White Nylon Screw and Stand-off Set – M2.5 Thread&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.adafruit.com/product/3299&quot;&gt;Black Nylon Screw and Stand-off Set – M2.5 Thread&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the US nobody has metric drill bits … &lt;em&gt;because&lt;/em&gt; … however, you can use a &lt;strong&gt;3/32 in&lt;/strong&gt; drill bit which is &lt;strong&gt;2.4 mm&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Place the circuit board on the panel in the desired location and mark the mounting holes on the panel, keeping away from the supporting frame.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Drill the holes in the panel.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Gently screw a 2.5 mm standoff with a ‘male’ extension into each hole - they should fit tightly when you screw them in hand tight - no need for a nut on the other side of the panel.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190122_project_board_w_standoffs.png&quot; alt=&quot;Ampersand board with standoffs&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Place the board over the ‘female’ end of the standoff and screw in a 2.5mm bolt through the board into the standoff.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/20190122_project_board_w_fpga.png&quot; alt=&quot;Ampersand board with fpga&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to add a breadboard on the panel, these often come with double sided tape on their base, so just stick this in place next to your board.&lt;/p&gt;</content><author><name>Rob Jones</name></author><summary type="html">Building Raspberry Pi and Arduino projects can get messy if you have the microcontroller, a breadboard and other devices all hooked up with loose wires.</summary></entry></feed>
